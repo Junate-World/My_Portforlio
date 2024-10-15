@@ -1,0 +1,30 @@
+
+### `.gitignore`
+
+```plaintext
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Flask environment variables
+*.env
+*.flaskenv
+
+# macOS
+.DS_Store
+
+# Heroku
+*.log
+*.env
+.heroku/
+
+# IDEs
+.vscode/
+.idea/
