@@ -86,6 +86,24 @@ PROJECTS_DATA = [
         "title": "Voice Activated Chatbot With Learning Ability",
         "description": "This is a Python-based voice-activated chatbot that can recognize your speech, match your question to a knowledge base, and provide an appropriate response using text-to-speech (TTS). If the chatbot doesn't know the answer, you can teach it new responses that are saved to the knowledge base for future conversations.",
         "tags": ["Python", "Speech Recognition", "Text-to-Speech", "AI", "Machine Learning"]
+    },
+    {
+        "id": "14",
+        "title": "Project Management Web App",
+        "description": "A simple Flask-based task management application with user registration, login, password reset functionality (via email), and basic CRUD operations on tasks. Password reset is powered by SendGrid through Flask-Mail.",
+        "tags": ["Flask","Python", "JavaScript", "CSS", "HTML", "AI", "Machine Learning"]
+    },
+    {
+        "id": "15",
+        "title": "Family Tree Web App",
+        "description": "This is a web-based family management and genealogy app built with Flask. It allows registered users to add, edit, view, and delete family members, and visualize family relationships through a family tree interface.",
+        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask"]
+    },
+    {
+        "id": "16",
+        "title": "PDF merger encryptor",
+        "description": "This is a Flask-based web application that allows users to upload multiple PDF files, merge them into a single PDF, and optionally encrypt the merged output with a password.",
+        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask"]
     }
 ]
 
