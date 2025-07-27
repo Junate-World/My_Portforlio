@@ -1,7 +1,8 @@
-from flask import Flask, render_template, flash
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
+#The decorators for each route.
 @app.route('/')
 def home():
     return render_template('index.html')

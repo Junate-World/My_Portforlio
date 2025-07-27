@@ -1,10 +1,16 @@
+<!-- Linking all child html files to the base html file using jinja templating style-->
 {% extends 'base.html' %} {% block title %} Home {% endblock %}
 
 {% block content %}
 <main>
   <section>
       <h2>Hello, I'm Abel Ogbonna</h2>
-      <p>Welcome to my portfolio! Explore to know more about me and my works.</p>
+      
+      <p id="text">
+        <!-- The text from the JS file appears here. Dynamically rendered.-->
+      </p>
   </section>
 </main>
+<!-- Linking to JS file using jinja templating style-->
+<script src="{{ url_for('static', filename='script.js')}}"></script>
 {% endblock %}
