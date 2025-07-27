@@ -90,7 +90,7 @@ PROJECTS_DATA = [
     {
         "id": "14",
         "title": "Project Management Web App",
-        "description": "A simple Flask-based task management application with user registration, login, password reset functionality (via email), and basic CRUD operations on tasks. Password reset is powered by SendGrid through Flask-Mail.",
+        "description": "A simple Flask-based task management application with user registration, login, password reset functionality (via email), and basic CRUD operations on tasks. Password reset is powered by SendGrid through Flask-Mail. <a href='https://junate.onreader.com/'>Click to see</a>.",
         "tags": ["Flask","Python", "JavaScript", "CSS", "HTML", "AI", "Machine Learning"]
     },
     {
