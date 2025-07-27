@@ -3,14 +3,54 @@
 
 {% block content %}
 <main>
-  <section>
+  <section class="hero-section">
       <h2>Hello, I'm Abel Ogbonna</h2>
-      
       <p id="text">
         <!-- The text from the JS file appears here. Dynamically rendered.-->
       </p>
   </section>
+
+  <section class="projects-section">
+    <h3>My Projects Portfolio</h3>
+    <p class="projects-intro">Here are the projects I've worked on. Each project represents my skills and experience in different technologies.</p>
+    
+    <div class="projects-container">
+      {% for project in projects %}
+      <div class="project-card" data-project="{{ project.id }}">
+        <div class="project-header">
+          <h4>{{ project.title }}</h4>
+          <span class="project-status">
+            {% if project.id in completed_projects %}
+              Completed
+            {% else %}
+              Active
+            {% endif %}
+          </span>
+        </div>
+        <div class="project-content">
+          <p>{{ project.description }}</p>
+          <div class="project-tags">
+            {% for tag in project.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="project-footer">
+          <button class="complete-btn" onclick="completeProject(this)" 
+                  {% if project.id in completed_projects %}disabled{% endif %}>
+            {% if project.id in completed_projects %}
+              Completed
+            {% else %}
+              Complete
+            {% endif %}
+          </button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 </main>
 <!-- Linking to JS file using jinja templating style-->
 <script src="{{ url_for('static', filename='script.js')}}"></script>
+{% endblock %}
 {% endblock %}
