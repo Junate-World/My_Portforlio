@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function(){
 // Slideshow functionality
 let currentSlideIndex = 0;
 let slides = [];
+let autoplayInterval = null;
+let autoplaySpeed = 4000; // 4 seconds per slide
 
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize slideshow
@@ -99,6 +101,29 @@ function currentSlide(slideIndex) {
   updateSlideCounter();
   updateIndicators();
   updateNavigationButtons();
+}
+
+function toggleAutoplay() {
+  const autoplayBtn = document.getElementById('autoplay-btn');
+  const autoplayIcon = document.getElementById('autoplay-icon');
+  const autoplayText = document.getElementById('autoplay-text');
+  
+  if (autoplayInterval) {
+    // Stop autoplay
+    clearInterval(autoplayInterval);
+    autoplayInterval = null;
+    autoplayBtn.classList.remove('active');
+    autoplayIcon.textContent = '▶️';
+    autoplayText.textContent = 'Auto Play';
+  } else {
+    // Start autoplay
+    autoplayInterval = setInterval(() => {
+      changeSlide(1);
+    }, autoplaySpeed);
+    autoplayBtn.classList.add('active');
+    autoplayIcon.textContent = '⏸️';
+    autoplayText.textContent = 'Pause';
+  }
 }
 
 function updateSlideCounter() {

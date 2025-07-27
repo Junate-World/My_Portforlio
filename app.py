@@ -148,7 +148,7 @@ PROJECTS_DATA = [
         "tags": ["Flask", "Python", "JavaScript", "CSS", "HTML", "SendGrid", "Flask-Mail"],
         "links": {
             "github": "https://github.com/Junate-World/junate",
-            "demo": "https://junate.onreader.com/"
+            "demo": "https://junate.onrender.com/"
         }
     },
     {

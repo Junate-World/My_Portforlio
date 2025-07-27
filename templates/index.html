@@ -77,11 +77,23 @@
       <!-- Navigation Controls -->
       <div class="slideshow-controls">
         <button class="nav-btn prev-btn" onclick="changeSlide(-1)">❮ Previous</button>
-        <div class="slide-indicators">
-          {% for project in projects %}
-          <span class="indicator" onclick="currentSlide({{ loop.index }})" data-slide="{{ loop.index }}"></span>
-          {% endfor %}
+        
+        <div class="center-controls">
+          <div class="slide-indicators">
+            {% for project in projects %}
+            <span class="indicator" onclick="currentSlide({{ loop.index }})" data-slide="{{ loop.index }}"></span>
+            {% endfor %}
+          </div>
+          
+          <!-- Auto-play Toggle -->
+          <div class="autoplay-control">
+            <button id="autoplay-btn" class="autoplay-btn" onclick="toggleAutoplay()">
+              <span id="autoplay-icon">▶️</span>
+              <span id="autoplay-text">Auto Play</span>
+            </button>
+          </div>
         </div>
+        
         <button class="nav-btn next-btn" onclick="changeSlide(1)">Next ❯</button>
       </div>
       
