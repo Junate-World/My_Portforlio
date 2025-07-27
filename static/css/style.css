@@ -239,6 +239,73 @@ section p {
   text-align: left;
 }
 
+/* Project Links */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.github-link {
+  background: rgba(36, 41, 46, 0.3);
+  color: #24292e;
+  border-color: rgba(36, 41, 46, 0.5);
+}
+
+.github-link:hover {
+  background: rgba(36, 41, 46, 0.5);
+  color: #fff;
+}
+
+.demo-link {
+  background: rgba(40, 167, 69, 0.3);
+  color: #28a745;
+  border-color: rgba(40, 167, 69, 0.5);
+}
+
+.demo-link:hover {
+  background: rgba(40, 167, 69, 0.5);
+  color: #fff;
+}
+
+.docs-link {
+  background: rgba(0, 114, 255, 0.3);
+  color: #0072ff;
+  border-color: rgba(0, 114, 255, 0.5);
+}
+
+.docs-link:hover {
+  background: rgba(0, 114, 255, 0.5);
+  color: #fff;
+}
+
+.link-icon {
+  font-style: normal;
+  font-size: 1.1em;
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -460,5 +527,15 @@ footer p a:hover {
 
   .projects-section h3 {
     font-size: 1.5em;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-link {
+    justify-content: center;
+    padding: 10px 16px;
   }
 }
