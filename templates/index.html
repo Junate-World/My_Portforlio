@@ -12,41 +12,59 @@
 
   <section class="projects-section">
     <h3>My Projects Portfolio</h3>
-    <p class="projects-intro">Here are the projects I've worked on. Each project represents my skills and experience in different technologies.</p>
+    <p class="projects-intro">Here are the projects I've worked on. Navigate through them using the controls below.</p>
     
-    <div class="projects-container">
+    <div class="slideshow-container">
       {% for project in projects %}
-      <div class="project-card" data-project="{{ project.id }}">
-        <div class="project-header">
-          <h4>{{ project.title }}</h4>
-          <span class="project-status">
-            {% if project.id in completed_projects %}
-              Completed
-            {% else %}
-              Active
-            {% endif %}
-          </span>
-        </div>
-        <div class="project-content">
-          <p>{{ project.description }}</p>
-          <div class="project-tags">
-            {% for tag in project.tags %}
-            <span class="tag">{{ tag }}</span>
-            {% endfor %}
+      <div class="project-slide" data-project="{{ project.id }}" style="display: {% if loop.first %}block{% else %}none{% endif %}">
+        <div class="project-card">
+          <div class="project-header">
+            <h4>{{ project.title }}</h4>
+            <span class="project-status">
+              {% if project.id in completed_projects %}
+                Completed
+              {% else %}
+                Active
+              {% endif %}
+            </span>
           </div>
-        </div>
-        <div class="project-footer">
-          <button class="complete-btn" onclick="completeProject(this)" 
-                  {% if project.id in completed_projects %}disabled{% endif %}>
-            {% if project.id in completed_projects %}
-              Completed
-            {% else %}
-              Complete
-            {% endif %}
-          </button>
+          <div class="project-content">
+            <p>{{ project.description }}</p>
+            <div class="project-tags">
+              {% for tag in project.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="complete-btn" onclick="completeProject(this)" 
+                    {% if project.id in completed_projects %}disabled{% endif %}>
+              {% if project.id in completed_projects %}
+                Completed
+              {% else %}
+                Complete
+              {% endif %}
+            </button>
+          </div>
         </div>
       </div>
       {% endfor %}
+      
+      <!-- Navigation Controls -->
+      <div class="slideshow-controls">
+        <button class="nav-btn prev-btn" onclick="changeSlide(-1)">❮ Previous</button>
+        <div class="slide-indicators">
+          {% for project in projects %}
+          <span class="indicator" onclick="currentSlide({{ loop.index }})" data-slide="{{ loop.index }}"></span>
+          {% endfor %}
+        </div>
+        <button class="nav-btn next-btn" onclick="changeSlide(1)">Next ❯</button>
+      </div>
+      
+      <!-- Slide Counter -->
+      <div class="slide-counter">
+        <span id="current-slide">1</span> / <span id="total-slides">{{ projects|length }}</span>
+      </div>
     </div>
   </section>
 </main>

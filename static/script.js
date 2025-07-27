@@ -36,10 +36,109 @@ document.addEventListener("DOMContentLoaded", function(){
   type_1();
 });
 
+// Slideshow functionality
+let currentSlideIndex = 0;
+let slides = [];
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize slideshow
+  slides = document.querySelectorAll('.project-slide');
+  updateSlideCounter();
+  updateIndicators();
+  updateNavigationButtons();
+});
+
+function changeSlide(direction) {
+  const totalSlides = slides.length;
+  
+  // Hide current slide
+  slides[currentSlideIndex].style.display = 'none';
+  
+  // Calculate new slide index
+  currentSlideIndex += direction;
+  
+  // Handle wrap-around
+  if (currentSlideIndex >= totalSlides) {
+    currentSlideIndex = 0;
+  } else if (currentSlideIndex < 0) {
+    currentSlideIndex = totalSlides - 1;
+  }
+  
+  // Show new slide with fade animation
+  slides[currentSlideIndex].style.display = 'block';
+  slides[currentSlideIndex].classList.add('fade');
+  
+  // Remove fade class after animation
+  setTimeout(() => {
+    slides[currentSlideIndex].classList.remove('fade');
+  }, 500);
+  
+  updateSlideCounter();
+  updateIndicators();
+  updateNavigationButtons();
+}
+
+function currentSlide(slideIndex) {
+  if (slideIndex < 1 || slideIndex > slides.length) return;
+  
+  // Hide current slide
+  slides[currentSlideIndex].style.display = 'none';
+  
+  // Update current slide index (convert from 1-based to 0-based)
+  currentSlideIndex = slideIndex - 1;
+  
+  // Show new slide with fade animation
+  slides[currentSlideIndex].style.display = 'block';
+  slides[currentSlideIndex].classList.add('fade');
+  
+  // Remove fade class after animation
+  setTimeout(() => {
+    slides[currentSlideIndex].classList.remove('fade');
+  }, 500);
+  
+  updateSlideCounter();
+  updateIndicators();
+  updateNavigationButtons();
+}
+
+function updateSlideCounter() {
+  const currentSlideElement = document.getElementById('current-slide');
+  const totalSlidesElement = document.getElementById('total-slides');
+  
+  if (currentSlideElement && totalSlidesElement) {
+    currentSlideElement.textContent = currentSlideIndex + 1;
+    totalSlidesElement.textContent = slides.length;
+  }
+}
+
+function updateIndicators() {
+  const indicators = document.querySelectorAll('.indicator');
+  
+  indicators.forEach((indicator, index) => {
+    if (index === currentSlideIndex) {
+      indicator.classList.add('active');
+    } else {
+      indicator.classList.remove('active');
+    }
+  });
+}
+
+function updateNavigationButtons() {
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  if (prevBtn && nextBtn) {
+    // For circular navigation, buttons are always enabled
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
+  }
+}
+
 // Project card sliding functionality with backend integration
 function completeProject(button) {
   const projectCard = button.closest('.project-card');
-  const projectId = projectCard.getAttribute('data-project');
+  const projectSlide = button.closest('.project-slide');
+  const projectId = projectSlide.getAttribute('data-project');
   const projectTitle = projectCard.querySelector('.project-header h4').textContent;
   
   // Disable button to prevent multiple clicks
@@ -68,9 +167,14 @@ function completeProject(button) {
       button.textContent = 'Completed';
       button.style.background = 'rgba(108, 117, 125, 0.5)';
       
-      // Remove card after animation completes
+      // Remove slide after animation completes
       setTimeout(() => {
-        projectCard.style.display = 'none';
+        projectSlide.style.display = 'none';
+        
+        // Move to next slide if available
+        if (slides.length > 1) {
+          changeSlide(1);
+        }
         
         // Show completion message with project title
         showProjectCompletionMessage(projectId, projectTitle);

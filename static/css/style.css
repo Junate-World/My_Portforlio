@@ -108,35 +108,18 @@ section p {
   margin-bottom: 40px;
 }
 
-/* Tasks Section */
-.tasks-section h3 {
-  font-size: 1.8em;
-  margin-bottom: 30px;
-  color: #00c6ff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.tasks-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  width: 100%;
-  max-width: 1200px;
-}
-
 /* Projects Section */
 .projects-section {
   width: 100%;
   max-width: 1200px;
 }
 
-.projects-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
+.projects-section h3 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
   color: #00c6ff;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .projects-intro {
@@ -146,45 +129,31 @@ section p {
   font-style: italic;
 }
 
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  width: 100%;
-}
-
-/* Task Cards */
-.task-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.4s ease;
+/* Slideshow Container */
+.slideshow-container {
   position: relative;
-  overflow: hidden;
-  transform: translateX(0);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.task-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.15);
+.project-slide {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
 }
 
-.task-card.sliding-out {
-  animation: slideOut 0.8s ease-in-out forwards;
+.project-slide.fade {
+  animation: fade 0.5s ease-in-out;
 }
 
-@keyframes slideOut {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
+@keyframes fade {
+  from {
+    opacity: 0.4;
+    transform: translateX(50px);
   }
-  100% {
-    transform: translateX(-100%);
-    opacity: 0;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -200,7 +169,7 @@ section p {
   position: relative;
   overflow: hidden;
   transform: translateX(0);
-  min-height: 250px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -215,6 +184,17 @@ section p {
   animation: slideOut 0.8s ease-in-out forwards;
 }
 
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -224,7 +204,7 @@ section p {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.project-header h3 {
+.project-header h4 {
   font-size: 1.4em;
   color: #00c6ff;
   margin: 0;
@@ -282,67 +262,71 @@ section p {
   margin-top: auto;
 }
 
-.task-header {
+/* Slideshow Controls */
+.slideshow-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+  padding: 20px 0;
 }
 
-.task-header h4 {
-  font-size: 1.3em;
-  color: #00c6ff;
-  margin: 0;
+.nav-btn {
+  background: rgba(0, 114, 255, 0.3);
+  color: #0072ff;
+  border: 2px solid rgba(0, 114, 255, 0.5);
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   font-weight: 600;
+  font-size: 0.9em;
 }
 
-.task-status {
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.8em;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.nav-btn:hover {
+  background: rgba(0, 114, 255, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
-.task-status:contains("In Progress") {
-  background: rgba(255, 193, 7, 0.3);
-  color: #ffc107;
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
 }
 
-.task-status:contains("Active") {
-  background: rgba(40, 167, 69, 0.3);
-  color: #28a745;
-}
-
-.task-status:contains("Planning") {
-  background: rgba(23, 162, 184, 0.3);
-  color: #17a2b8;
-}
-
-.task-status:contains("Completed") {
-  background: rgba(108, 117, 125, 0.3);
-  color: #6c757d;
-}
-
-.task-content {
-  margin-bottom: 20px;
-}
-
-.task-content p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #ddd;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.task-tags {
+/* Slide Indicators */
+.slide-indicators {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.indicator.active {
+  background: #00c6ff;
+  transform: scale(1.2);
+}
+
+/* Slide Counter */
+.slide-counter {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #ddd;
+  font-weight: 600;
 }
 
 .complete-btn {
@@ -449,24 +433,14 @@ footer p a:hover {
       height: 140px;
   }
 
-  .tasks-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .task-card {
-    padding: 20px;
-  }
-
-  .task-header {
+  .slideshow-controls {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    gap: 20px;
   }
 
-  .projects-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .nav-btn {
+    padding: 10px 15px;
+    font-size: 0.8em;
   }
 
   .project-card {
@@ -480,11 +454,11 @@ footer p a:hover {
     gap: 10px;
   }
 
-  .project-header h3 {
+  .project-header h4 {
     font-size: 1.2em;
   }
 
-  .projects-section h2 {
-    font-size: 2em;
+  .projects-section h3 {
+    font-size: 1.5em;
   }
 }
