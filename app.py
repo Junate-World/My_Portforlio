@@ -158,7 +158,7 @@ PROJECTS_DATA = [
         "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask", "Genealogy"],
         "links": {
             "github": "https://github.com/Junate-World/family-website",
-            "demo": "https://family-website.ll5z.onrender.com/"
+            "demo": "https://family-website-ll5z.onrender.com"
         }
     },
     {
