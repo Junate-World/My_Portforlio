@@ -170,6 +170,16 @@ PROJECTS_DATA = [
             "github": "https://github.com/Junate-World/pdf-merger-encryptor",
             "demo": "https://github.com/Junate-World/pdf-merger-encryptor"
         }
+    },
+     {
+        "id": "17",
+        "title": "Junate Towers",
+        "description": "A modern, web-based documentation system for telecommunication tower technical drawings and specifications built with Flask. It allows users to upload and manage tower drawings, specifications, and other related files.",
+        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask", "Documentation"],
+        "links": {
+            "github": "https://github.com/Junate-World/Junate_Towers",
+            "demo": "https://junate-towers.vercel.app/"
+        }
     }
 ]
 
