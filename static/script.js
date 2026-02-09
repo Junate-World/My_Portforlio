@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
 document.addEventListener("DOMContentLoaded", function(){
   const textElement_1 = document.getElementById("text_1");
 
-  const message_1 = "Hi, I'm Abel Ogbonna, a Python Developer with a passion for AI and Machine Learning. I have experience in Python, JavaScript, CSS, HTML, SQL and Machine Learning.";
+  const message_1 = "Hi, I'm Abel Ogbonna, a Python Developer with a passion for AI and Machine Learning. I have experience in Python, JavaScript, CSS, HTML, SQL and Machine Learning. Aside my programming skills, I also manage Telecommunication projects and with 5 years of experience in the field, I have a strong background in project management and team leadership. I am dedicated to delivering high-quality solutions and continuously improving my skills to stay at the forefront of technology.";
 
   let index_1 = 0;
 
