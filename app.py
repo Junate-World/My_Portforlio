@@ -180,6 +180,16 @@ PROJECTS_DATA = [
             "github": "https://github.com/Junate-World/Junate_Towers",
             "demo": "https://junate-towers.vercel.app/"
         }
+    },
+     {
+        "id": "18",
+        "title": "AI Agent [Customer Assistant]",
+        "description": " AI Support Agent A Flask-based AI support assistant with RAG (Retrieval-Augmented Generation) capabilities powered by Ollama.",
+        "tags": ["Python", "CSS", "HTML", "Flask", "AI", "Machine Learning", "RAG"],
+        "links": {
+            "github": "https://github.com/Junate-World/AI-Agent",
+            "demo": "https://github.com/Junate-World/AI-Agent"
+        }
     }
 ]
 
