@@ -11,34 +11,32 @@ COMPLETED_PROJECTS_FILE = 'completed_projects.json'
 PROJECTS_DATA = [
     {
         "id": "1",
-        "title": "Email Automation",
-        "description": "This script sends a daily motivational email using Python. It uses the `smtplib` library for sending emails and the `schedule` library for scheduling the email to be sent at a specific time each day.",
-        "tags": ["Python", "smtplib", "schedule", "Automation"],
+        "title": "AI Agent [Customer Assistant]",
+        "description": " AI Support Agent A Flask-based AI support assistant with RAG (Retrieval-Augmented Generation) capabilities powered by Ollama.",
+        "tags": ["Python", "CSS", "HTML", "Flask", "AI", "Machine Learning", "RAG"],
         "links": {
-            "github": "https://github.com/Junate-World/email-automation",
-            "demo": "https://github.com/Junate-World/email-automation",
-            "documentation": "https://github.com/Junate-World/email-automation"
+            "github": "https://github.com/Junate-World/AI-Agent",
+            "demo": "https://github.com/Junate-World/AI-Agent"
         }
     },
     {
         "id": "2",
-        "title": "Image-Uploader-Application",
-        "description": "This is a simple image uploader application built using Flask, a micro web framework for Python. The application allows users to upload images, view uploaded images, and delete images.",
-        "tags": ["Flask", "Python", "File Upload", "Web App"],
+        "title": "Junate Towers",
+        "description": "A modern, web-based documentation system for telecommunication tower technical drawings and specifications built with Flask. It allows users to upload and manage tower drawings, specifications, and other related files.",
+        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask", "Documentation"],
         "links": {
-            "github": "https://github.com/Junate-World/image-uploader",
-            "demo": "https://github.com/Junate-World/image-uploader",
-            "documentation": "https://github.com/Junate-World/image-uploader"
-        }
+            "github": "https://github.com/Junate-World/Junate_Towers",
+            "demo": "https://junate-towers.vercel.app/"
+        }  
     },
     {
         "id": "3",
-        "title": "JW-Flask-form",
-        "description": "A Flask application to collect and manage user information.",
-        "tags": ["Flask", "Forms", "Data Collection"],
+        "title": "PDF Merger & Encryptor",
+        "description": "This is a Flask-based web application that allows users to upload multiple PDF files, merge them into a single PDF, and optionally encrypt the merged output with a password.",
+        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask", "PDF Processing"],
         "links": {
-            "github": "https://github.com/Junate-World/jw-flask-form",
-            "demo": "https://github.com/Junate-World/jw-flask-form"
+            "github": "https://github.com/Junate-World/pdf-merger-encryptor",
+            "demo": "https://github.com/Junate-World/pdf-merger-encryptor"
         }
     },
     {
@@ -63,12 +61,12 @@ PROJECTS_DATA = [
     },
     {
         "id": "6",
-        "title": "Graph Bar",
-        "description": "This project is designed to visualize the tower heights of various IHS sites using data stored in an Excel file. The visualization is performed using Matplotlib and pandas.",
-        "tags": ["Python", "Matplotlib", "Pandas", "Data Visualization"],
+        "title": "Family Tree Web App",
+        "description": "This is a web-based family management and genealogy app built with Flask. It allows registered users to add, edit, view, and delete family members, and visualize family relationships through a family tree interface.",
+        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask", "Genealogy"],
         "links": {
-            "github": "https://github.com/Junate-World/graph-bar",
-            "demo": "https://github.com/Junate-World/graph-bar"
+            "github": "https://github.com/Junate-World/family-website",
+            "demo": "https://family-website-ll5z.onrender.com/"
         }
     },
     {
@@ -153,42 +151,44 @@ PROJECTS_DATA = [
     },
     {
         "id": "15",
-        "title": "Family Tree Web App",
-        "description": "This is a web-based family management and genealogy app built with Flask. It allows registered users to add, edit, view, and delete family members, and visualize family relationships through a family tree interface.",
-        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask", "Genealogy"],
+        "title": "Graph Bar",
+        "description": "This project is designed to visualize the tower heights of various IHS sites using data stored in an Excel file. The visualization is performed using Matplotlib and pandas.",
+        "tags": ["Python", "Matplotlib", "Pandas", "Data Visualization"],
         "links": {
-            "github": "https://github.com/Junate-World/family-website",
-            "demo": "https://family-website-ll5z.onrender.com/"
+            "github": "https://github.com/Junate-World/graph-bar",
+            "demo": "https://github.com/Junate-World/graph-bar"
         }
     },
     {
         "id": "16",
-        "title": "PDF Merger & Encryptor",
-        "description": "This is a Flask-based web application that allows users to upload multiple PDF files, merge them into a single PDF, and optionally encrypt the merged output with a password.",
-        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask", "PDF Processing"],
+        "title": "JW-Flask-form",
+        "description": "A Flask application to collect and manage user information.",
+        "tags": ["Flask", "Forms", "Data Collection"],
         "links": {
-            "github": "https://github.com/Junate-World/pdf-merger-encryptor",
-            "demo": "https://github.com/Junate-World/pdf-merger-encryptor"
+            "github": "https://github.com/Junate-World/jw-flask-form",
+            "demo": "https://github.com/Junate-World/jw-flask-form"
         }
     },
      {
         "id": "17",
-        "title": "Junate Towers",
-        "description": "A modern, web-based documentation system for telecommunication tower technical drawings and specifications built with Flask. It allows users to upload and manage tower drawings, specifications, and other related files.",
-        "tags": ["Python", "JavaScript", "CSS", "HTML", "Flask", "Documentation"],
+        "title": "Image-Uploader-Application",
+        "description": "This is a simple image uploader application built using Flask, a micro web framework for Python. The application allows users to upload images, view uploaded images, and delete images.",
+        "tags": ["Flask", "Python", "File Upload", "Web App"],
         "links": {
-            "github": "https://github.com/Junate-World/Junate_Towers",
-            "demo": "https://junate-towers.vercel.app/"
+            "github": "https://github.com/Junate-World/image-uploader",
+            "demo": "https://github.com/Junate-World/image-uploader",
+            "documentation": "https://github.com/Junate-World/image-uploader"
         }
     },
      {
         "id": "18",
-        "title": "AI Agent [Customer Assistant]",
-        "description": " AI Support Agent A Flask-based AI support assistant with RAG (Retrieval-Augmented Generation) capabilities powered by Ollama.",
-        "tags": ["Python", "CSS", "HTML", "Flask", "AI", "Machine Learning", "RAG"],
+        "title": "Email Automation",
+        "description": "This script sends a daily motivational email using Python. It uses the `smtplib` library for sending emails and the `schedule` library for scheduling the email to be sent at a specific time each day.",
+        "tags": ["Python", "smtplib", "schedule", "Automation"],
         "links": {
-            "github": "https://github.com/Junate-World/AI-Agent",
-            "demo": "https://github.com/Junate-World/AI-Agent"
+            "github": "https://github.com/Junate-World/email-automation",
+            "demo": "https://github.com/Junate-World/email-automation",
+            "documentation": "https://github.com/Junate-World/email-automation"
         }
     }
 ]
