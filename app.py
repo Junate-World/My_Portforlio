@@ -176,8 +176,7 @@ PROJECTS_DATA = [
         "tags": ["Flask", "Python", "File Upload", "Web App"],
         "links": {
             "github": "https://github.com/Junate-World/image-uploader",
-            "demo": "https://github.com/Junate-World/image-uploader",
-            "documentation": "https://github.com/Junate-World/image-uploader"
+            "demo": "https://github.com/Junate-World/image-uploader"
         }
     },
      {
@@ -187,8 +186,7 @@ PROJECTS_DATA = [
         "tags": ["Python", "smtplib", "schedule", "Automation"],
         "links": {
             "github": "https://github.com/Junate-World/email-automation",
-            "demo": "https://github.com/Junate-World/email-automation",
-            "documentation": "https://github.com/Junate-World/email-automation"
+            "demo": "https://github.com/Junate-World/email-automation"
         }
     },
      {
@@ -198,8 +196,7 @@ PROJECTS_DATA = [
         "tags": ["Python", "Flask", "Supabase", "Cloudinary"," Docker"],
         "links": {
             "github": "https://github.com/Junate-World/talented_league",
-            "demo": "https://talented-league.onrender.com",
-            "documentation": "https://github.com/Junate-World/talented_league"
+            "demo": "https://talented-league.onrender.com"
         }
     }
 ]
