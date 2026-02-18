@@ -190,6 +190,17 @@ PROJECTS_DATA = [
             "demo": "https://github.com/Junate-World/email-automation",
             "documentation": "https://github.com/Junate-World/email-automation"
         }
+    },
+     {
+        "id": "19",
+        "title": "Talented League",
+        "description": "Production-ready Flask web application for managing a professional football league system (similar to English Premier League).",
+        "tags": ["Python", "Flask", "Supabase", "Cloudinary"," Docker"],
+        "links": {
+            "github": "https://github.com/Junate-World/talented_league",
+            "demo": "https://talented-league.onrender.com",
+            "documentation": "https://github.com/Junate-World/talented_league"
+        }
     }
 ]
 
